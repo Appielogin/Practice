@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <form id="contactForm">
+            <h4>Contact Form</h4>
+            <br>
+                <h5>Your Name</h5>
+                <br>
+                <div class="name-row">
+                    <input type="text" placeholder="First Name" id="firstName" required>
+                    <p class="error" id="firstNameError"></p>
+                    <input type="text" placeholder="Last Name" id="lastName" required>
+                    <p class="error" id="lastNameError" ></p>
+                </div>
+                <br><br>
+                <div class="option-group">
+                    <spam class="group-tittle">Select Gender</spam>
+                    <br>
+                    <label for="male" class="option">
+                        <input type="radio" value="male" name="gender"  id="male">
+                        Male
+                    </label>
+                   
+                    <label for="female" class="option">
+                        <input type="radio" value="female" name="gender" id="female">
+                        Female
+                    </label>
+                </div>
+                <p class="error" id="genderError"></p>
+                
+                <br><br>
+                <div class="option-group">
+                    <spam class="group-tittle">Choose your Job Type</spam>
+                    <br>
+                    <label for="fullTime" class="option">
+                        <input type="checkbox" value="fullTime" name="job" id="fullTime">
+                        Full Time
+                    </label>
+               
+                    <label for="partTime" class="option">
+                        <input type="checkbox" value="partTime" name="job" id="partTime">
+                        Part Time
+                    </label>
+                
+                    <label for="seasonal" class="option">
+                        <input type="checkbox" value="seasonal" name="job" id="seasonal">
+                        Seasonal
+                    </label>
+                
+                    <label for="temporary" class="option">
+                        <input type="checkbox" value="temporary" name="job" id="temporary">
+                        Temporary
+                    </label>
+                </div>
+                <br><br>
+                <h5>Select your city</h5>
+                <select name="city">
+                    <option value="delhi">Delhi</option>
+                    <option value="pune">Pune</option>
+                    <option value="Banglore">Banglore</option>
+                    <option value="chhenai">Chhenai</option>
+                </select>
+                <br><br>
+                <h5>Feedback</h5>
+                <textarea name="feedback" id="feedback" placeholder="Please give your valuable feedback here....." rows="5"></textarea>
+                <p class="error" id="feedbackError"></p>
+                <br>
+                <div class="btn-container">
+                    <button type="submit" id="submitBtn">Submit</button>
+                </div>
+    </form>
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <div class="sucess-icon">&check;</div>
+            <h2>Success!</h2>
+            <p id="successMessage">Your form was submitted successfully! &#127882</p>
+            <button id="closeModal">Close</button>
+        </div>
+    </div>
+</body>
+</html>
